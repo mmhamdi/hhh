@@ -1,0 +1,26 @@
+<p>product-card works!</p>
+<div
+  class="card"
+  style="width: 18rem"
+  *ngIf="MaxPrix == null || MaxPrix == Prod.price || MaxPrix > Prod.price"
+>
+  <img src="/assets/tof.png" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">Id:{{ Prod.id }}</h5>
+    <h5 class="card-title">Title:{{ Prod.title }}</h5>
+    <h5 class="card-title">Price:{{ Prod.price }}</h5>
+    <h5 class="card-title">Quantity:{{ Prod.quantity }}</h5>
+    <h5 class="card-title">Like:{{ Prod.like }}</h5>
+
+    <button type="submit" class="btn btn-dark" [routerLink]="['/edit',Prod.id]">update</button>
+    <button type="submit" class="btn btn-dark" (click)="delete(Prod.id)" >Delete</button>
+    <button type="submit" class="btn btn-primary">like</button>
+    <button
+      type="submit"
+      [disabled]="Prod.quantity == 0"
+      class="btn btn-danger"
+    >
+      buy
+    </button>
+  </div>
+</div>

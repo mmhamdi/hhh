@@ -1,0 +1,16 @@
+<div class="container">
+    <button type="submit" class="btn-success" [routerLink]="['/todo/add']"> add new todo</button>
+<div *ngFor="let todo of todolist; let index ">
+
+    {{todo|json}} 
+    <button type="submit" class="btn btn-dark" [routerLink]="['/todo/edit',todo.id]">update</button>
+    <button type="submit" class="btn btn-dark" (click)="delete(todo.id)">delete</button>
+
+</div>
+
+<button class="btn btn-success" (click)="getnbrcompleted()">Nombre completed</button>
+<div  *ngIf="completed" class="alert alert-danger"> {{ completed }}</div>
+<button class="btn btn-success" (click)="getnbruncompleted()">Nombre uncompleted</button>
+<div *ngIf="uncompleted" class="alert alert-danger"> {{ uncompleted }}</div>
+
+</div>

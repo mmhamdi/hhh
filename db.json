@@ -1,0 +1,78 @@
+{
+  "products": [
+    {
+      "id": 22,
+      "title": "Tshirt 1",
+      "price": 18,
+      "quantity": 0,
+      "like": 0
+    },
+    {
+      "id": 2,
+      "title": "Tshirt 2",
+      "price": 21,
+      "quantity": 10,
+      "like": 0
+    },
+    {
+      "id": 3,
+      "title": "Tshirt 3",
+      "price": 16,
+      "quantity": 8,
+      "like": 0
+    },
+    {
+      "id": "111",
+      "title": "salut",
+      "quantity": "123"
+    },
+    {
+      "id": "123345",
+      "title": "skander shirt",
+      "quantity": "22"
+    }
+  ],
+  "todos": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "delectus aut autem",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "quis ut nam facilis et officia qui",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "fugiat veniam minus",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 4,
+      "title": "quo adipisci enim quam utab",
+      "completed": true
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

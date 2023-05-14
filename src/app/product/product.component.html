@@ -1,0 +1,52 @@
+<p>product works!</p>
+
+<!--<P>{{ name }}</P>
+<h1>{{ 1 + add() }}</h1>
+<button [disabled]="prop" type="submit">save</button>
+<br />
+<button (click)="show()" type="submit">Show</button>
+<p>{{ message }}</p>
+
+<input [(ngModel)]="prop1" />
+
+<p>{{ prop1 }}</p>
+
+<input [(ngModel)]="prixMax" type="number" />
+
+<table border="3">
+  <tr>
+    <td>id</td>
+    <td>titre</td>
+    <td>price</td>
+    <td>quantite</td>
+    <td>like</td>
+    <td>action</td>
+    <td>like</td>
+  </tr>
+  <tr *ngFor="let p of listProduct; let i = index">
+    <div *ngIf="p.price < prixMax">
+      <td>{{ p.id }}</td>
+      <td>{{ p.title }}</td>
+      <td>{{ p.price }}</td>
+      <td>{{ p.quantity }}</td>
+      <td>{{ p.like }}</td>
+      <td>
+        <button (click)="buy(i)" type="submit" [disabled]="p.quantity == 0">
+          buy
+        </button>
+      </td>
+      <td><button (click)="like(i)" type="submit">like</button></td>
+    </div>
+  </tr>
+</table>-->
+<div class="container">
+  <div class="row">
+    <input type="number" class="form-control" name="prixMax" [(ngModel)]="prixMax">
+<app-product-card  class="col-3 m-3"
+ *ngFor="let p of listProduct; let i = index"
+  [Prod]="p"
+  [MaxPrix]="prixMax"
+  (likeEvent)="like($event)"></app-product-card>
+  <button type="submit" class="btn btn-outline-secondary" (click)="appStart()">start</button>
+  </div>
+</div>
